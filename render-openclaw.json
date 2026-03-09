@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openclaw.ai/schema/config.json",
+  "gateway": {
+    "mode": "local",
+    "bind": "lan",
+    "controlUi": {
+      "dangerouslyAllowHostHeaderOriginFallback": true
+    }
+  }
+}
