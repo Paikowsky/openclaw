@@ -135,6 +135,9 @@ COPY --from=runtime-assets --chown=node:node /app/extensions ./extensions
 COPY --from=runtime-assets --chown=node:node /app/skills ./skills
 COPY --from=runtime-assets --chown=node:node /app/docs ./docs
 
+# Copy Render-specific config file (for cloud deployments)
+COPY --chown=node:node render-openclaw.json ./render-openclaw.json
+
 # Keep pnpm available in the runtime image for container-local workflows.
 # Use a shared Corepack home so the non-root `node` user does not need a
 # first-run network fetch when invoking pnpm.
